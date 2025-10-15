@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from pooldata import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pooldata.urls')),
+    # path('input_name/', views.input_name, name='input_name'),
+    # path('test/', views.test_view, name='test_view'),
+    path('formset_view/', views.formset_view, name='formset_view')
 ]
